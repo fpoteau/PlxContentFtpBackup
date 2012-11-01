@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<document>
+	<title><![CDATA[PluXML FTP Backup]]></title>
+	<author><![CDATA[François POTEAU]]></author>
+	<version>1.2</version>
+	<date>14/10/2012</date>
+	<site>http://francoispoteau.com</site>
+	<description><![CDATA[Save the content of your blog on a FTP server]]></description>
+	<requirements></requirements>
+</document>

@@ -1,0 +1,38 @@
+/* styles.css plxContentBackup */
+#plxcontentbackupftp .clear { clear: both; margin:0; padding: 0; }
+#plxcontentbackupftp { font-size: 10pt; color: #777777; } 
+#plxcontentbackupftp h2 { background: #FFF; border: 0; color: #004771; padding: 0; margin: 20px 0 25px 0; }
+#plxcontentbackupftp h3 { background: #FFF; border: 1px solid #ccc; color: #333; padding: 10px; margin: 20px 0 0px 0; display: block; font-size: 15pt;  font-weight: normal; }
+#plxcontentbackupftp h3 a { color: #6fa9d6; }
+/* options */
+#plxcontentbackupftp div.backupoptions { height: 70px; }
+#plxcontentbackupftp div.backupoptions a {
+	width: 188px;
+	height: 42px;
+	font-size: 11pt;
+	display: block;
+	border: 0;
+	float: left;
+	margin: 10px;
+	padding: 5px 10px 10px 50px;
+	color: #515151;
+	font-weight: normal;
+}
+#plxcontentbackupftp div.backupoptions a.upload { background: url('img/uploadftp.jpg') 0 0 no-repeat; }
+#plxcontentbackupftp div.backupoptions a.download { background: url('img/downloadftp.jpg') 0 0 no-repeat; }
+
+/* form */
+#plxcontentbackupftp form label, #plxcontentbackupftp form div.label { width: 250px; float: left; margin: 10px; }
+#plxcontentbackupftp form input { width: 250px; margin: 10px; background-color: #fdfdfd; border: 1px solid #d1d1d1; }
+#plxcontentbackupftp form legend { font-size: 12pt; font-weight: bold; }
+#plxcontentbackupftp form input[type="submit"] { height: 25px; border: 1px solid #858585; width: 120px; margin-left:280px; font-weight: bold; padding: 2px 5px 10px 10px; background: url('img/ok.png') no-repeat 3px 3px #dddddd; color: #515151; text-align: right; }
+#plxcontentbackupftp form { margin: 30px 0 30px 0; }
+#plxcontentbackupftp form .checkboxes { width: 250px; margin: 10px; float: left; }
+#plxcontentbackupftp form .checkboxes input.checkbox { width: auto; border: 0; float: left; margin: 2px 2px 2px 0; }
+#plxcontentbackupftp form .checkboxes label { width: auto; border: 0; float: none; margin: 2px; color: #111; }
+#plxcontentbackupftp form .checkboxes div { margin: 10px 10px 10px 0; border: 1px solid #d1d1d1; padding: 5px; width: 250px; }
+/* liste */
+#plxcontentbackupftp div.liste, #plxcontentbackupftp div.liste a { font-weight: normal }
+#plxcontentbackupftp div.liste table { padding: 10px; }
+#plxcontentbackupftp div.liste table td { padding: 3px; }
+#plxcontentbackupftp div.liste td.name { padding-left: 21px; background: url('img/zip.png') no-repeat 0 0; }

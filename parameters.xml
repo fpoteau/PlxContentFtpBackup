@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<document>
+	<parameter name="savedir" type="string">../../temp/</parameter>
+	<parameter name="days" type="numeric">7</parameter>
+	<parameter name="saved_dirs" type="string">data/images/,data/documents/,data/articles/,data/commentaires/,data/statiques/,data/configuration/categories.xml,data/configuration/statiques.xml,data/configuration/tags.xml,data/configuration/plugins.xml,plugins/,themes/</parameter>
+	<parameter name="lastbackupdate" type="numeric">121014</parameter>
+	<parameter name="ftp_server" type="string"></parameter>
+	<parameter name="ftp_port" type="numeric">0</parameter>
+	<parameter name="ftp_user_name" type="string"></parameter>
+	<parameter name="ftp_user_pass" type="string"></parameter>
+	<parameter name="ftp_target_path" type="string">backup</parameter>
+</document>
