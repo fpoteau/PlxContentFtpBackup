@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 ﻿<?php if(!defined('PLX_ROOT')) exit; ?>
-=======
-<?php if(!defined('PLX_ROOT')) exit; ?>
->>>>>>> 5c1e2189d1e9b5750d94c51e61367b796329a258
+
+
 <?php
 require_once('class/class.zip.php');
 require_once('class/class.archiveftp.php');
