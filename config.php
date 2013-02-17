@@ -17,6 +17,13 @@ $archive->ftp_param(
 	$plxPlugin->getParam('ftp_port')
 );
 
+// s'il s'agit de la première utilisation
+// définitions des valeurs par défaut
+
+if(!$plxPlugin->getParam('savedir')) { $plxPlugin->setParam('savedir', '../../temp/', 'string'); }
+
+if(!$plxPlugin->getParam('days')) { $plxPlugin->setParam('days', '7', 'numeric'); }
+
 if(!empty($_POST)) {
 	$plxPlugin->setParam('savedir', $_POST['savedir'], 'string');
 	$plxPlugin->setParam('days', $_POST['days'], 'numeric');
