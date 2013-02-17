@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿<?php if(!defined('PLX_ROOT')) exit; ?>
+=======
+<?php if(!defined('PLX_ROOT')) exit; ?>
+>>>>>>> 5c1e2189d1e9b5750d94c51e61367b796329a258
 <?php
 require_once('class/class.zip.php');
 require_once('class/class.archiveftp.php');
@@ -78,7 +82,15 @@ if($_GET['action'] == 'download') {
 					$plxAdmin->aConf['racine_articles'],
 					$plxAdmin->aConf['racine_commentaires'],
 					$plxAdmin->aConf['racine_statiques'],
+<<<<<<< HEAD
 					PLX_CONFIG_PATH,
+=======
+					$plxAdmin->aConf['categories'],
+					$plxAdmin->aConf['statiques'],
+					$plxAdmin->aConf['users'],
+					$plxAdmin->aConf['tags'],
+					$plxAdmin->aConf['plugins'],
+>>>>>>> 5c1e2189d1e9b5750d94c51e61367b796329a258
 					$plxAdmin->aConf['racine_plugins'],
 					$plxAdmin->aConf['racine_themes'],
 				);
