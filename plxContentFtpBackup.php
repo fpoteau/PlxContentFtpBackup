@@ -74,10 +74,10 @@ class plxContentFtpBackup extends plxPlugin {
 	 *
 	 * @return	void
 	 * @author	François POTEAU 
-	 **/
+	 
 	public function AdminTopEndHead() {
 		echo '<link rel="stylesheet" type="text/css" href="'.PLX_PLUGINS.'plxContentFtpBackup/styles.css" media="screen" />';
 	}
-
+**/
 }
 ?>
