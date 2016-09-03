@@ -1,10 +1,15 @@
 Plugin de sauvegarde PluXML par FTP
-François POTEAU -contact: https://github.com/frapfrap/
 
 Installation
 ============
 
-Télécharger  l'archive, extraire dans votre dossier plugin, renommer le dossier "plxContentFtpBackup" (attention pluxml sensible à la vasse) 
+Télécharger  l'archive, extraire dans votre dossier plugin, renommer le dossier "plxContentFtpBackup" (attention pluxml sensible à la vasse)
+
+Utilisation
+===========
+
+Configurer votre serveur FTP et sélectionner les dossiers à sauvegarder
+Le plugin se connecte au serveur pour récupérer la liste de archives existantes (permet également de vérifier le bon fonctionnement de la connexion FTP.)
 
 Historique
 =========
