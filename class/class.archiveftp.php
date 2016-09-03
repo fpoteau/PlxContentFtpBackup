@@ -14,7 +14,7 @@
     *   @last           07/06/2011, François Poteau
 */
 
-class archiveftp extends plxContentBackupFtp {
+class archiveftp extends plxContentFtpBackup {
     
 	public $save_dir;
 	public $saved_dirs;
@@ -41,7 +41,7 @@ class archiveftp extends plxContentBackupFtp {
 	// *********************************************************************
 	
 	
-    public function __construct($save_dir='../../sauvegarde/',$days='14',$saved_dirs='data/articles/,data/commentaires,data/statiques',$lastbackupdate)
+    public function __construct($save_dir='../../sauvegarde/',$days='14',$saved_dirs='data/articles/,data/commentaires,data/statiques',$lastbackupdate='010101')
     {
 		$this->saved_dirs = explode(",", $saved_dirs);
         $this->save_dir = (substr($save_dir, -1) != '/') ? $save_dir.'/' : $save_dir;

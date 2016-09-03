@@ -3,8 +3,10 @@
 
 
 <?php
+
 require_once('class/class.zip.php');
 require_once('class/class.archiveftp.php');
+
 $archive = new archiveftp($plxPlugin->getParam('savedir'),$plxPlugin->getParam('days'),$plxPlugin->getParam('saved_dirs'),$plxPlugin->getParam('lastbackupdate'));
 
 $archive->check();
@@ -38,7 +40,7 @@ if(!empty($_POST)) {
 	$plxPlugin->setParam('saved_dirs', $dirs, 'string');
 	// écriture des paramètres
 	$plxPlugin->saveParams(); 
-	header('Location: parametres_plugin.php?p=plxContentBackupFtp');
+	header('Location: parametres_plugin.php?p=plxContentFtpBackup');
 	exit;
 }
 if($_GET['action'] == 'upload') {
@@ -55,13 +57,13 @@ if($_GET['action'] == 'download') {
 	$archive->getlastfile();
 }
 ?>
-<div id="plxcontentbackupftp">
+<div id="plxContentFtpBackup">
 	<h2><?php $plxPlugin->lang('L_TITLE_CONFIG') ?></h2>
 	<p><?php $plxPlugin->lang('L_DESCRIPTION_CONFIG') ?></p>
 	<h3><?php $plxPlugin->lang('L_ACTION_CONFIG') ?></h3>
 	<div class="backupoptions">
-		<a class="upload" href="parametres_plugin.php?p=plxContentBackupFtp&action=upload" title="<?php $plxPlugin->lang('L_UPLOAD_CONFIG') ?>"><?php $plxPlugin->lang('L_UPLOAD_CONFIG') ?></a>
-		<a class="download" href="parametres_plugin.php?p=plxContentBackupFtp&action=download"title="<?php $plxPlugin->lang('L_DOWNLOAD_CONFIG') ?>"><?php $plxPlugin->lang('L_DOWNLOAD_CONFIG') ?></a>
+		<a class="upload" href="parametres_plugin.php?p=plxContentFtpBackup&action=upload" title="<?php $plxPlugin->lang('L_UPLOAD_CONFIG') ?>"><?php $plxPlugin->lang('L_UPLOAD_CONFIG') ?></a>
+		<a class="download" href="parametres_plugin.php?p=plxContentFtpBackup&action=download"title="<?php $plxPlugin->lang('L_DOWNLOAD_CONFIG') ?>"><?php $plxPlugin->lang('L_DOWNLOAD_CONFIG') ?></a>
 		<div class="clear"></div>
 	</div>
 	<h3><?php $plxPlugin->lang('L_ARCHIVELIST_CONFIG') ?> - <?php echo'<a href="ftp://'.$archive->ftp_user_name.':'.$archive->ftp_user_pass.'@'.$archive->ftp_server.$archive->ftp_target_path.'">'.$plxPlugin->getParam('ftp_server').'</a>'; ?></h3>
@@ -70,7 +72,7 @@ if($_GET['action'] == 'download') {
 	</div>
 	<div class="clear"></div>
 	<h3><?php $plxPlugin->lang('L_OPTIONS_CONFIG') ?></h3>
-	<form action="parametres_plugin.php?p=plxContentBackupFtp" method="post">
+	<form action="parametres_plugin.php?p=plxContentFtpBackup" method="post">
 		<fieldset>
 			<label><?php $plxPlugin->lang('L_SAVEDIR_CONFIG') ?></label> <input type="text" name="savedir" value="<?php echo plxUtils::strCheck($plxPlugin->getParam('savedir')) ?>" /><br />
 			<label><?php $plxPlugin->lang('L_DAY_CONFIG') ?></label> <input type="text" name="days" value="<?php echo plxUtils::strCheck($plxPlugin->getParam('days')) ?>" /><br />
@@ -79,12 +81,11 @@ if($_GET['action'] == 'download') {
 			<label><?php $plxPlugin->lang('L_FTP_USER_NAME') ?></label> <input type="text" name="ftp_user_name" value="<?php echo plxUtils::strCheck($plxPlugin->getParam('ftp_user_name')) ?>" /><br />
 			<label><?php $plxPlugin->lang('L_FTP_USER_PASS') ?></label> <input type="password" name="ftp_user_pass" value="<?php echo plxUtils::strCheck($plxPlugin->getParam('ftp_user_pass')) ?>" /><br />
 			<label><?php $plxPlugin->lang('L_FTP_TARGET_PATH') ?></label> <input type="text" name="ftp_target_path" value="<?php echo plxUtils::strCheck($plxPlugin->getParam('ftp_target_path')) ?>" /><br />
-			<div class="label"><?php $plxPlugin->lang('L_SAVED_DIRS') ?></div>
+			<label"><?php $plxPlugin->lang('L_SAVED_DIRS') ?></label>
 			<div class="checkboxes">
 				<?php
 				$data = array(
-					$plxAdmin->aConf['images'],
-					$plxAdmin->aConf['documents'],
+					$plxAdmin->aConf['medias'],
 					$plxAdmin->aConf['racine_articles'],
 					$plxAdmin->aConf['racine_commentaires'],
 					$plxAdmin->aConf['racine_statiques'],
@@ -96,9 +97,9 @@ if($_GET['action'] == 'download') {
 				);
 				
 				foreach($data as $d) {
-					echo '<div><label>'. $d .'</label> <input class="checkbox"';
-					if(in_array($d,explode(',',$plxPlugin->getParam('saved_dirs')))) { echo 'checked="checked"'; }
-					echo' type="checkbox" value="'. $d .'" name="data[]" /></div>';
+					echo '<input class="checkbox"';
+					if(in_array($d,explode(',',$plxPlugin->getParam('saved_dirs')))) { echo ' checked'; }
+					echo' type="checkbox" value="'. $d .'" name="data[]" />'. $d .'<br />';
 				}
 				?>
 			</div>

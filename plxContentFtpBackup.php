@@ -1,12 +1,13 @@
 <?php
 /**
- * Classe plxContentBackupFtp
+ * Classe plxContentFtpBackup
  *
  * @version 1.0
  * @date	02/06/2010
+ * @update 03/09/2016
  * @author	François POTEAU
  **/
-class plxContentBackupFtp extends plxPlugin {
+class plxContentFtpBackup extends plxPlugin {
 	
 	
 	/**
@@ -21,6 +22,7 @@ class plxContentBackupFtp extends plxPlugin {
 		parent::__construct($default_lang);
 		
 		# droits pour accèder à la page config.php du plugin
+		
 		$this->setConfigProfil(PROFIL_ADMIN);
 		
 		# Ajouts des hooks
@@ -74,7 +76,7 @@ class plxContentBackupFtp extends plxPlugin {
 	 * @author	François POTEAU 
 	 **/
 	public function AdminTopEndHead() {
-		echo '<link rel="stylesheet" type="text/css" href="'.PLX_PLUGINS.'plxContentBackupFtp/styles.css" media="screen" />';
+		echo '<link rel="stylesheet" type="text/css" href="'.PLX_PLUGINS.'plxContentFtpBackup/styles.css" media="screen" />';
 	}
 
 }
